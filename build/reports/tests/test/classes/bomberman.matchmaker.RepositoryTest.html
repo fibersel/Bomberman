@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class bomberman.matchmaker.RepositoryTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class bomberman.matchmaker.RepositoryTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/bomberman.matchmaker.html">bomberman.matchmaker</a> &gt; RepositoryTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">5</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.123s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">getRankForExistentUserTest</td>
+<td>0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getRankForNewUserTest</td>
+<td>0.048s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getSessionsTest</td>
+<td>0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getUsersTest</td>
+<td>0.033s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">saveSessionTest</td>
+<td>0.032s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>18:13:42.907 [Test worker] INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+18:13:42.916 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:42.917 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.361 [Test worker] INFO org.springframework.jdbc.datasource.init.ScriptUtils - Executing SQL script from class path resource [schema.sql]
+18:13:43.366 [Test worker] DEBUG org.springframework.jdbc.datasource.init.ScriptUtils - 0 returned as update count for SQL: DROP SCHEMA IF EXISTS mm CASCADE
+18:13:43.367 [Test worker] DEBUG org.springframework.jdbc.datasource.init.ScriptUtils - 0 returned as update count for SQL: CREATE SCHEMA mm
+18:13:43.386 [Test worker] DEBUG org.springframework.jdbc.datasource.init.ScriptUtils - 0 returned as update count for SQL: CREATE TABLE mm.users (id integer auto_increment primary key, login varchar unique not null, rank integer not null default 0)
+18:13:43.388 [Test worker] DEBUG org.springframework.jdbc.datasource.init.ScriptUtils - 0 returned as update count for SQL: CREATE TABLE mm.game_sessions (id bigint not null primary key, start_date_time timestamp)
+18:13:43.393 [Test worker] DEBUG org.springframework.jdbc.datasource.init.ScriptUtils - 0 returned as update count for SQL: CREATE TABLE mm.game_sessions_to_users (game_session_id bigint not null references game_sessions on delete cascade, user_id int references users on delete cascade, primary key (game_session_id, user_id))
+18:13:43.394 [Test worker] INFO org.springframework.jdbc.datasource.init.ScriptUtils - Executed SQL script from class path resource [schema.sql] in 32 ms.
+18:13:43.395 [Test worker] INFO org.springframework.jdbc.datasource.init.ScriptUtils - Executing SQL script from class path resource [monitoring_test.sql]
+18:13:43.400 [Test worker] DEBUG org.springframework.jdbc.datasource.init.ScriptUtils - 1 returned as update count for SQL: insert into mm.users (id, login, rank) values (1, 'User1', 0)
+18:13:43.401 [Test worker] DEBUG org.springframework.jdbc.datasource.init.ScriptUtils - 1 returned as update count for SQL: insert into mm.users (id, login, rank) values (2, 'User2', 15)
+18:13:43.413 [Test worker] DEBUG org.springframework.jdbc.datasource.init.ScriptUtils - 1 returned as update count for SQL: insert into mm.game_sessions (id, start_date_time) values (1, parsedatetime('08-04-2018 18:47:52.690', 'dd-MM-yyyy hh:mm:ss.SS'))
+18:13:43.415 [Test worker] DEBUG org.springframework.jdbc.datasource.init.ScriptUtils - 1 returned as update count for SQL: insert into mm.game_sessions_to_users (game_session_id, user_id) values (1, 2)
+18:13:43.415 [Test worker] INFO org.springframework.jdbc.datasource.init.ScriptUtils - Executed SQL script from class path resource [monitoring_test.sql] in 20 ms.
+18:13:43.416 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.430 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+18:13:43.431 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT rank FROM mm.users WHERE login = ?]
+18:13:43.431 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.431 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.457 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.457 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+18:13:43.458 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO mm.users (login) VALUES (?)]
+18:13:43.458 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.458 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.460 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQL update affected 1 rows
+18:13:43.461 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.462 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+18:13:43.462 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT count(*) as count FROM mm.users WHERE login = ?]
+18:13:43.463 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.463 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.469 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.470 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL update [DELETE from mm.users u WHERE u.login = 'NEW_USER']
+18:13:43.471 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.471 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.474 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQL update affected 1 rows
+18:13:43.474 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.477 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [select u.id, u.login, u.rank, sum(1) as games from mm.users u join mm.game_sessions_to_users su on u.id = su.user_id group by u.id union all select u.id, u.login, u.rank, 0 as games from mm.users u left join mm.game_sessions_to_users su on u.id = su.user_id where su.game_session_id is null order by id]
+18:13:43.478 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.478 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.485 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.509 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT s.id, s.start_date_time, u.login FROM mm.game_sessions s JOIN mm.game_sessions_to_users stu ON s.id = stu.game_session_id JOIN mm.users u ON u.id = stu.user_id ORDER BY s.id]
+18:13:43.509 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.509 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.513 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.516 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+18:13:43.516 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO mm.users (login) VALUES (?)]
+18:13:43.516 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.516 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.518 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQL update affected 1 rows
+18:13:43.519 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.519 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+18:13:43.519 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO mm.users (login) VALUES (?)]
+18:13:43.519 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.519 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.520 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQL update affected 1 rows
+18:13:43.520 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.520 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+18:13:43.521 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO mm.users (login) VALUES (?)]
+18:13:43.521 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.521 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.522 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQL update affected 1 rows
+18:13:43.522 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.522 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+18:13:43.523 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO mm.game_sessions (id, start_date_time) VALUES (?, ?)]
+18:13:43.523 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.523 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.524 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQL update affected 1 rows
+18:13:43.524 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.526 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL batch update [INSERT INTO mm.game_sessions_to_users (game_session_id, user_id) SELECT ?, id FROM mm.users WHERE login = ?]
+18:13:43.526 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO mm.game_sessions_to_users (game_session_id, user_id) SELECT ?, id FROM mm.users WHERE login = ?]
+18:13:43.527 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.527 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.530 [Test worker] DEBUG org.springframework.jdbc.support.JdbcUtils - JDBC driver supports batch updates
+18:13:43.535 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.536 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+18:13:43.536 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT count(*) as count FROM mm.game_sessions WHERE id = ?]
+18:13:43.536 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.536 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.537 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.538 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+18:13:43.538 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT login FROM mm.users t JOIN mm.game_sessions_to_users t2 ON t.id = t2.user_id WHERE t2.game_session_id = ? ORDER BY t.login]
+18:13:43.538 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.538 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.540 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.540 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL update [DELETE from mm.game_sessions s WHERE s.id = 404]
+18:13:43.541 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.541 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.543 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQL update affected 1 rows
+18:13:43.543 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.543 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL update [DELETE from mm.users u WHERE u.login = 'saveSessionTest1']
+18:13:43.543 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.543 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.545 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQL update affected 1 rows
+18:13:43.545 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.545 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL update [DELETE from mm.users u WHERE u.login = 'saveSessionTest2']
+18:13:43.545 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.545 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.546 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQL update affected 1 rows
+18:13:43.547 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.547 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL update [DELETE from mm.users u WHERE u.login = 'saveSessionTest3']
+18:13:43.547 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.547 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.548 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQL update affected 1 rows
+18:13:43.548 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:13:43.549 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+18:13:43.549 [Test worker] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT rank FROM mm.users WHERE login = ?]
+18:13:43.549 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:13:43.549 [Test worker] DEBUG org.springframework.jdbc.datasource.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false]
+18:13:43.550 [Test worker] DEBUG org.springframework.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 4.5.1</a> at 16 мая 2018 г., 18:14:27</p>
+</div>
+</div>
+</body>
+</html>

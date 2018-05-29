@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="7.5">
+<file name="/home/fibersell/Java/Sphere/atom/game/src/test/java/bomberman/matchmaker/MatchMakerTest.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/test/java/bomberman/matchmaker/MatchMakerTestConfig.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/test/java/bomberman/matchmaker/RepositoryTest.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/test/java/bomberman/matchmaker/StringGenerator.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/test/java/bomberman/matchmaker/TestClient.java">
+</file>
+</checkstyle>

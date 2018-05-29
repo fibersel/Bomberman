@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="7.5">
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/BombermanApp.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/gameservice/ConnectionHandler.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/gameservice/ConnectionPool.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/gameservice/GameController.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/gameservice/GameService.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/gameservice/GameServiceConfig.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/gameservice/GameSession.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/matchmaker/MatchMaker.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/matchmaker/MatchMakerConfig.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/matchmaker/MatchMakerDaemon.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/matchmaker/MatchMakerRepository.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/matchmaker/monitoring/MonitoringController.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/matchmaker/monitoring/QueueState.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/matchmaker/monitoring/SessionData.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/matchmaker/monitoring/UserData.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/model/Bomb.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/model/Bonus.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/model/BonusType.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/model/Character.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/model/DataContainer.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/model/Direction.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/model/Field.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/model/Fire.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/model/Message.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/model/Pathless.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/model/Point.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/model/Tickable.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/model/Topic.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/model/Wall.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/model/Wood.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/model/geometry/Bar.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/model/geometry/Collider.java">
+</file>
+<file name="/home/fibersell/Java/Sphere/atom/game/src/main/java/bomberman/util/JsonHelper.java">
+</file>
+</checkstyle>
